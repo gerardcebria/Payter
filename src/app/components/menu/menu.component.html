@@ -1,13 +1,16 @@
 <nav id="main-menu">
   <ul class="nav nav-sidebar nav-dark nav-bg flex-column pt-3">
-    <li class="nav-item">
+    <li class="nav-item" id="dashboard">
       <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="fa fa-folder pr-2">&nbsp;</i>Dashboard</a>
+      <i class="nav-link fa fa-folder pr-2">&nbsp;</i>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLinkActive="active" [routerLink]="['/items','overview']"><i class="fa fa-list pr-2">&nbsp;</i>Overview</a>
+      <i class="nav-link fa fa-list pr-2">&nbsp;</i>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLinkActive="active" [routerLink]="['/settings']"><i class="fa fa-gear pr-2">&nbsp;</i>Settings</a>
+      <i class="nav-link fa fa-gear pr-2">&nbsp;</i>
     </li>
   </ul>
 </nav>

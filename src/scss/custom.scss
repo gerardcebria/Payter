@@ -83,9 +83,36 @@
   }
 }
 
-/*Animation button add*/
 .button-add{
  float: right;
+}
+
+
+#main-menu{
+   left: -80px;
+}
+
+#main-menu a{
+  visibility: hidden;
+}
+#main-menu .nav-item > i{
+  margin-right: 10%;
+  font-size: 150%;
+  margin-top: -30px;
+  float:right;
+}
+
+#main-menu:hover{
+  left:0px;
+  transition: 1s;  
+}
+
+#main-menu:hover a{
+  visibility: visible;
+}
+
+#main-menu:hover .nav-item > i{
+  visibility: hidden;
 }
 
 
