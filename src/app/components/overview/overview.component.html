@@ -3,11 +3,24 @@
     <div class="card-header">
       <h1>Overview of the items</h1>
     </div>
-    <ul class="list-group" *ngFor="let item of $items | async">
-      <li class="list-group-item" (click)="onSelectItem(item.id)">{{ item | json }}</li>
-    </ul>
+    <table class="table" id="table-items">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr (click)="onSelectItem(item.id)" *ngFor="let item of $items | async">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+        </tr>
+      </tbody>
+    </table>
     <div class="card-footer">
-        <a class="btn btn-success button-add" [routerLink]="['/items','new']">New</a>
+      <a class="btn btn-success button-right" [routerLink]="['/items','new']">New</a>
     </div>
   </div>
 </div>

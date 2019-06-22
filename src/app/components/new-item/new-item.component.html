@@ -1,23 +1,31 @@
-<div class="card">
-  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
-    <div class="card-body">
-      <div class="alert alert-danger" *ngIf="$error| async as error">
-        {{ error }}
-      </div>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" type="text" class="form-control" [class.is-invalid]="markInvalid('name')" placeholder="a name for this item" formControlName="name" />
-        <div class="invalid-feedback">
-          Please enter a name for this item.
+<div class="card-deck" id="card-new-item">
+  <div class="card">
+    <div class="card-header">
+      <h1>Insert new item</h1>
+    </div>
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="card-body">
+        <div class="alert alert-danger" *ngIf="$error| async as error">
+          {{ error }}
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" class="form-control" [class.is-invalid]="markInvalid('name')"
+            placeholder="a name for this item" formControlName="name"/>
+          <div class="invalid-feedback">
+            Please enter a name for this item.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input id="description" type="text" class="form-control" placeholder="a description for this item"
+            formControlName="description" />
         </div>
       </div>
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input id="description" type="text" class="form-control" placeholder="a description for this item" formControlName="description" />
+      <div class="card-footer">
+        <button class="btn btn-danger" [routerLink]="['/items','overview']">Back</button>
+        <input class="btn btn-success button-right" [disabled]="form.invalid" type="submit" name="add" />
       </div>
-    </div>
-    <div class="card-footer">
-      <input class="btn btn-success" [disabled]="form.invalid" type="submit" name="add" />
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

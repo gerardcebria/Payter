@@ -40,20 +40,21 @@
 
 /*Delete curve card*/
 .card{
+  margin-top: 10% ;
   border-radius: 0% !important;
   box-shadow: 7px 7px 3px 0px rgba(0,0,0,0.34);
-  }
+}
   
-  .list-group-item{
-    border-radius: 0% !important;
-  }
+.list-group-item{
+  border-radius: 0% !important;
+}
 
 .card-deck{
-  padding-top: 10% ;
   opacity: 0;
   animation-name: fadeInUp;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+
   -webkit-animation-name: fadeInUp;
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
@@ -83,13 +84,13 @@
   }
 }
 
-.button-add{
+.button-right{
  float: right;
 }
 
-
+/* SideBar menu hide and show*/
 #main-menu{
-   left: -80px;
+  left: -80px;
 }
 
 #main-menu a{
@@ -109,6 +110,7 @@
 
 #main-menu:hover a{
   visibility: visible;
+  transition: 1s;  
 }
 
 #main-menu:hover .nav-item > i{
@@ -116,3 +118,17 @@
 }
 
 
+#card-new-item{
+  width: 500px;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+
+
+
+/*Table
+*/
+#table-items{
+  padding-left:3px;
+}
