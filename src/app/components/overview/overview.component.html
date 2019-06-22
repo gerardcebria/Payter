@@ -2,12 +2,12 @@
   <div class="card">
     <div class="card-header">
       <h1>Overview of the items</h1>
-      <a class="btn btn-transparent" [routerLink]="['/items','new']">New</a>
     </div>
     <ul class="list-group" *ngFor="let item of $items | async">
       <li class="list-group-item" (click)="onSelectItem(item.id)">{{ item | json }}</li>
     </ul>
     <div class="card-footer">
+        <a class="btn btn-success button-add" [routerLink]="['/items','new']">New</a>
     </div>
   </div>
 </div>

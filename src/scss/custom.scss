@@ -11,10 +11,81 @@
   max-width: 250px;
 }
 
+.nav-link-header{
+  color: $font-color !important;
+  margin-left: 20%;
+}
+
+.nav-link{
+  color: $menu-font-color !important;
+}
+
+.nav-link:hover{
+  color: $menu-font-color-hover !important;
+} 
+
+.nav-bg{
+  background-color: $menu-color;
+}
+
 .brand-logo{
   cursor: pointer;
 }
 
-.card-deck{
-  padding-top: 10% 
+.card-header{
+  background-color: $header-card-color !important;
+  color: $header-font-color;
+  border-radius: 0% !important;
 }
+
+/*Delete curve card*/
+.card{
+  border-radius: 0% !important;
+  box-shadow: 7px 7px 3px 0px rgba(0,0,0,0.34);
+  }
+  
+  .list-group-item{
+    border-radius: 0% !important;
+  }
+
+.card-deck{
+  padding-top: 10% ;
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  
+}
+
+/*Animation card-deck*/
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+/*Animation button add*/
+.button-add{
+ float: right;
+}
+
+
