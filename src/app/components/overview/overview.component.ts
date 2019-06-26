@@ -64,5 +64,12 @@ export class OverviewComponent implements OnInit {
     }
   }
 
+  deleteItem(idValue) {
+    var idNumber: number = +idValue;
+    this.dataService.getItem(idNumber).subscribe(item => {
+      this.dataService.deleteItem(item);
+      this.loadAllItems();
+    });
+  }
 
 }
