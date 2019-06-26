@@ -2,6 +2,7 @@
   <div class="card">
     <div class="card-header">
       <h1>Overview of the items</h1>
+      <input type="text" #searchItems (keyup)="searchFilter(searchItems.value)" placeholder="Search for items..">
     </div>
     <table class="table" id="table-items">
       <thead>
